@@ -1,0 +1,32 @@
+cursor-style = block
+background = #15141b
+window-padding-x = 20
+window-padding-y = 20
+macos-titlebar-style = tabs
+copy-on-select = clipboard
+split-divider-color = #fc6157
+split-preserve-zoom = true
+bold-color = bright
+faint-opacity = 0.7
+font-family = Monaco
+macos-icon = xray
+unfocused-split-opacity = 0.5
+
+palette = 0=#110f18
+palette = 1=#ff6767
+palette = 2=#61ffca
+palette = 3=#ffca85
+palette = 4=#61ffca
+palette = 5=#a277ff
+palette = 6=#edecee
+palette = 7=#edecee
+palette = 8=#4d4d4d
+palette = 9=#ffca85
+palette = 10=#a277ff
+palette = 11=#ffca85
+palette = 12=#a277ff
+palette = 13=#a277ff
+                                                                                                                                                                            palette = 14=#61ffca
+palette = 15=#edecee
+
+bell-features = "no-attention,no-audio,no-system,no-title,no-border"
