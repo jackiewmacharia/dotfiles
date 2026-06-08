@@ -37,6 +37,11 @@ inoremap <C-z> <Esc>ui
 " ── Quit all panes ────────────────────────────────────────
 nnoremap <C-q> :qa<CR>
 
+" ── Buffer tabs ───────────────────────────────────────────
+nnoremap <Tab> :BufferLineCycleNext<CR>
+nnoremap <S-Tab> :BufferLineCyclePrev<CR>
+nnoremap <C-w> :bdelete<CR>
+
 " ── Git hunk navigation ───────────────────────────────────
 nnoremap <C-j> :GitGutterNextHunk<CR>
 nnoremap <C-k> :GitGutterPrevHunk<CR>

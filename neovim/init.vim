@@ -1,7 +1,7 @@
 " Main Neovim config
 " Settings in plugin/ and after/plugin/ are auto-loaded
 
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
 call plug#begin()
   Plug 'SirVer/ultisnips'
@@ -15,4 +15,5 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'nvim-tree/nvim-tree.lua'
   Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 call plug#end()

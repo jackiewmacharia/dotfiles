@@ -11,6 +11,9 @@
 ### Inside the tree
 | Key | Action |
 |-----|--------|
+| `Enter` | Open file |
+| `Ctrl+v` | Open in vertical split |
+| `Ctrl+x` | Open in horizontal split |
 | `d` | Delete file/folder |
 | `a` | Create file/folder |
 | `r` | Rename |
@@ -41,7 +44,7 @@
 | Key | VS Code equiv | Action |
 |-----|--------------|--------|
 | `Ctrl+p` | `Cmd+p` | Quick open file |
-| `Ctrl+f` | `Cmd+Shift+f` | Find in files (requires `brew install ripgrep`) |
+| `Ctrl+f` | `Cmd+Shift+f` | Find in files |
 | `:Telescope colorscheme` | — | Browse and preview themes |
 
 ## Editing
@@ -93,6 +96,36 @@
 | `:Git diff` | — | Diff view |
 | `:Git blame` | GitLens blame | Line blame |
 | `:Gdiffsplit` | Diff editor | Side-by-side diff |
+
+## Tabs (bufferline)
+| Key | VS Code equiv | Action |
+|-----|--------------|--------|
+| `Tab` | `Ctrl+Tab` | Next tab |
+| `Shift+Tab` | `Ctrl+Shift+Tab` | Previous tab |
+| `Ctrl+w` | `Cmd+w` | Close current tab |
+
+---
+
+## Splits
+
+Open splits from the command line:
+
+| Command | Action |
+|---------|--------|
+| `:vsp filename` | Open file in vertical split |
+| `:sp filename` | Open file in horizontal split |
+
+Navigate between splits:
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+w h` | Move to left split |
+| `Ctrl+w l` | Move to right split |
+| `Ctrl+w j` | Move to split below |
+| `Ctrl+w k` | Move to split above |
+| `Ctrl+w w` | Cycle through splits |
+
+---
 
 ## Quit
 | Key | Action |

@@ -9,8 +9,20 @@ brew install neovim node ripgrep
 ```
 
 ```sh
-/opt/homebrew/bin/python3 -m pip install pynvim
+/opt/homebrew/bin/python3 -m pip install pynvim --break-system-packages
 ```
+
+> `--break-system-packages` bypasses a restriction introduced in Python 3.12 that prevents pip from installing into the system-managed Homebrew environment. It is safe for a single package like `pynvim`.
+>
+> If you'd prefer not to use that flag, use a virtual environment instead:
+> ```sh
+> python3 -m venv ~/.config/nvim/.venv
+> ~/.config/nvim/.venv/bin/pip install pynvim
+> ```
+> Then update `init.vim` to point to the venv:
+> ```vim
+> let g:python3_host_prog = expand('~/.config/nvim/.venv/bin/python3')
+> ```
 
 | Tool | Required for |
 |------|-------------|
@@ -23,7 +35,7 @@ brew install neovim node ripgrep
 
 ## 1. Install vim-plug
 
-vim-plug manages all plugins. Install it in neovim with:
+vim-plug manages all plugins. Install it with:
 
 ```sh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -46,7 +58,7 @@ Wait for all plugins to finish downloading. You will see a status window. Once d
 
 ## 3. Install CoC language servers
 
-CoC handles autocomplete, go-to-definition and inline errors. Install extensions for the languages you use.
+CoC handles autocomplete, go-to-definition, and inline errors. Install extensions for the languages you use.
 Open Neovim and run:
 
 ```
