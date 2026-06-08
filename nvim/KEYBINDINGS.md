@@ -11,6 +11,9 @@
 ### Inside the tree
 | Key | Action |
 |-----|--------|
+| `Enter` | Open file |
+| `Ctrl+v` | Open in vertical split |
+| `Ctrl+x` | Open in horizontal split |
 | `d` | Delete file/folder |
 | `a` | Create file/folder |
 | `r` | Rename |
@@ -93,6 +96,27 @@
 | `:Git diff` | — | Diff view |
 | `:Git blame` | GitLens blame | Line blame |
 | `:Gdiffsplit` | Diff editor | Side-by-side diff |
+
+## Splits
+
+Open splits from the command line:
+
+| Command | Action |
+|---------|--------|
+| `:vsp filename` | Open file in vertical split |
+| `:sp filename` | Open file in horizontal split |
+
+Navigate between splits:
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+w h` | Move to left split |
+| `Ctrl+w l` | Move to right split |
+| `Ctrl+w j` | Move to split below |
+| `Ctrl+w k` | Move to split above |
+| `Ctrl+w w` | Cycle through splits |
+
+---
 
 ## Quit
 | Key | Action |
