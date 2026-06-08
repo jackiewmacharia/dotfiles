@@ -52,7 +52,8 @@
 |-----|--------------|--------|
 | `Ctrl+z` | `Cmd+z` | Undo |
 | `Ctrl+r` (n) | `Cmd+Shift+z` | Redo (built-in) |
-| `Ctrl+/` | `Cmd+/` | Toggle comment |
+| `gcc` (n) | `Cmd+/` | Toggle comment on line |
+| `gc` (v) | `Cmd+/` | Toggle comment on selection |
 | `v` (n) | click+drag | Visual/select mode |
 | `ggVG` (n) | `Cmd+a` | Select all |
 | `ggdG` (n) | — | Delete all |

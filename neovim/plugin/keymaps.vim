@@ -27,8 +27,8 @@ nmap <C-m> <Plug>(coc-rename)
 imap <C-m> <Esc><Plug>(coc-rename)
 
 " ── Toggle comment ────────────────────────────────────────
-nmap <C-/> <Plug>NERDCommenterToggle
-imap <C-/> <Esc><Plug>NERDCommenterToggle
+nmap gcc <Plug>NERDCommenterToggle
+vmap gc <Plug>NERDCommenterToggle
 
 " ── Undo/Redo ─────────────────────────────────────────────
 nnoremap <C-z> u
