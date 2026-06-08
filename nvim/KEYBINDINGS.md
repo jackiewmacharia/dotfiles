@@ -44,7 +44,7 @@
 | Key | VS Code equiv | Action |
 |-----|--------------|--------|
 | `Ctrl+p` | `Cmd+p` | Quick open file |
-| `Ctrl+f` | `Cmd+Shift+f` | Find in files (requires `brew install ripgrep`) |
+| `Ctrl+f` | `Cmd+Shift+f` | Find in files |
 | `:Telescope colorscheme` | — | Browse and preview themes |
 
 ## Editing
@@ -96,6 +96,15 @@
 | `:Git diff` | — | Diff view |
 | `:Git blame` | GitLens blame | Line blame |
 | `:Gdiffsplit` | Diff editor | Side-by-side diff |
+
+## Tabs (bufferline)
+| Key | VS Code equiv | Action |
+|-----|--------------|--------|
+| `Tab` | `Ctrl+Tab` | Next tab |
+| `Shift+Tab` | `Ctrl+Shift+Tab` | Previous tab |
+| `Ctrl+w` | `Cmd+w` | Close current tab |
+
+---
 
 ## Splits
 
