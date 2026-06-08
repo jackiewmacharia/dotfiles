@@ -5,7 +5,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions fast-syntax-highlighting zsh-interactive-cd zsh-navigation-tools)
 
 source $ZSH/oh-my-zsh.sh
+
 source ~/.zsh/aliases/docker.zsh
+source ~/.zsh/aliases/general.zsh
 source ~/.zsh/aliases/git.zsh
 source ~/.zsh/aliases/kubectl.zsh
 source ~/.zsh/aliases/node.zsh
