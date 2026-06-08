@@ -3,7 +3,15 @@
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
+# macOS creates a hidden file literally named Icon + a carriage return (Icon\r)
+# when a folder has a custom icon. This entry must end with \r to match it — don't retype this line.
+#
+# WARNING: the \r is lost every time this file is edited, so always restore it after any change:
+#   perl -i -pe 's/^Icon\n/Icon\r\n/' ~/.gitignore_global
+#
+# Verify with:
+#   cat -A ~/.gitignore_global | grep Icon
+# Expected output: Icon^M$  (^M = \r, $ = end of line — if you see just Icon$ it's broken)
 Icon
 
 
