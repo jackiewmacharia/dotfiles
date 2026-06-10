@@ -8,7 +8,9 @@ split-divider-color = #fc6157
 split-preserve-zoom = true
 bold-color = bright
 faint-opacity = 0.9
-font-family = Monaco
+# Needs: brew tap shaunsingh/SFMono-Nerd-Font-Ligaturized
+# brew install --cask font-sf-mono-nerd-font-ligaturized
+font-family = SFMono Nerd Font Ligaturized
 macos-icon = xray
 unfocused-split-opacity = 0.5
 selection-background = #3d3b4f
