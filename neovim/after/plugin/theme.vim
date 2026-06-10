@@ -1,2 +1,2 @@
-colorscheme tokyonight
-autocmd VimEnter * colorscheme tokyonight
+colorscheme palenight
+autocmd VimEnter * colorscheme palenight
