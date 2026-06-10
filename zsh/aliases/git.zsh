@@ -10,7 +10,9 @@ alias gf="git fetch"
 alias gcl="git clone"
 
 # Branching & viewing
-alias gch="git checkout"
+alias gco="git checkout"
+alias gcomtgpl="gco master; gpl"
+alias gcomngpl="gco main; gpl"
 alias gb="git branch"
 alias gd="git diff"
 alias gl='git log'
