@@ -2,6 +2,7 @@
 " Settings in plugin/ and after/plugin/ are auto-loaded
 
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
+set termguicolors
 
 call plug#begin()
   Plug 'SirVer/ultisnips'
@@ -16,4 +17,6 @@ call plug#begin()
   Plug 'nvim-tree/nvim-tree.lua'
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+  Plug 'nyoom-engineering/oxocarbon.nvim'
+  Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
