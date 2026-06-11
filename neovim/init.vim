@@ -19,4 +19,5 @@ call plug#begin()
   Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
   Plug 'nyoom-engineering/oxocarbon.nvim'
   Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'
 call plug#end()
