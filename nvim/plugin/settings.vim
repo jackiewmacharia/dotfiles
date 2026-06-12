@@ -28,3 +28,4 @@ syntax on
 
 " Autosave after 1s of inactivity
 autocmd CursorHold,CursorHoldI * silent! write
+
