@@ -52,7 +52,7 @@ require("nvim-tree").setup({
   },
   filters = {
     dotfiles = false,
-    custom = { "node_modules", ".git", "dist" },
+    custom = { "node_modules", "\\.git$", "dist" },
   },
 })
 
@@ -96,3 +96,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.defer_fn(set_git_highlights, 200)
   end,
 })
+

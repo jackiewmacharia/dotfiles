@@ -5,31 +5,15 @@
 Install the required system tools via Homebrew:
 
 ```sh
-brew install neovim node ripgrep
+brew install neovim node ripgrep gcc
 ```
-
-```sh
-/opt/homebrew/bin/python3 -m pip install pynvim --break-system-packages
-```
-
-> `--break-system-packages` bypasses a restriction introduced in Python 3.12 that prevents pip from installing into the system-managed Homebrew environment. It is safe for a single package like `pynvim`.
->
-> If you'd prefer not to use that flag, use a virtual environment instead:
-> ```sh
-> python3 -m venv ~/.config/nvim/.venv
-> ~/.config/nvim/.venv/bin/pip install pynvim
-> ```
-> Then update `init.vim` to point to the venv:
-> ```vim
-> let g:python3_host_prog = expand('~/.config/nvim/.venv/bin/python3')
-> ```
 
 | Tool | Required for |
 |------|-------------|
 | `neovim` | The editor |
-| `node` | CoC (autocomplete / LSP) |
+| `node` | TypeScript / JavaScript LSP server |
 | `ripgrep` | Telescope live grep (`Ctrl+f`) |
-| `pynvim` | UltiSnips (snippets) |
+| `gcc` | Compiling Tree-sitter parsers |
 
 ---
 
@@ -52,28 +36,35 @@ Open Neovim and run:
 :PlugInstall
 ```
 
-Wait for all plugins to finish downloading. You will see a status window. Once done, close it with `q` and restart Neovim.
+Wait for all plugins to finish downloading, then close the window with `q` and restart Neovim.
+
+Tree-sitter parsers compile automatically on first open (requires `gcc`).
 
 ---
 
-## 3. Install CoC language servers
+## 3. Install language servers
 
-CoC handles autocomplete, go-to-definition, and inline errors. Install extensions for the languages you use.
-Open Neovim and run:
+Language servers are managed by **Mason**. The servers listed in `lsp.lua` install automatically on first launch.
+
+To manage servers manually, open Neovim and run:
 
 ```
-:CocInstall coc-pyright coc-tsserver coc-json coc-yaml coc-sh
+:Mason
 ```
 
-| Extension | Language |
-|-----------|----------|
-| `coc-pyright` | Python |
-| `coc-tsserver` | TypeScript / JavaScript |
-| `coc-json` | JSON |
-| `coc-yaml` | YAML |
-| `coc-sh` | Bash / Shell |
+This opens an interactive UI where you can install, update, or remove servers.
 
-Remove any languages you don't need.
+### Servers installed automatically
+
+| Server | Language |
+|--------|----------|
+| `pyright` | Python |
+| `ts_ls` | TypeScript / JavaScript |
+| `jsonls` | JSON |
+| `yamlls` | YAML |
+| `bashls` | Bash / Shell |
+
+To add more, open `after/plugin/lsp.lua` and add the server name to both the `ensure_installed` list and the `vim.lsp.enable()` call. Find server names at [mason-registry](https://mason-registry.dev/registry/list).
 
 ---
 
@@ -83,11 +74,16 @@ Open a file and check:
 
 | Feature | How to test |
 |---------|------------|
-| File tree | `Ctrl+b` should toggle the left sidebar |
-| File search | `Ctrl+p` should open a fuzzy file finder |
-| Live grep | `Ctrl+f` should search file contents |
-| Autocomplete | Start typing in a code file — suggestions should appear |
-| Go to definition | `Ctrl+g` on a function/variable |
+| File tree | `Ctrl+b` toggles the left sidebar |
+| File search | `Ctrl+p` opens a fuzzy file finder |
+| Live grep | `Ctrl+f` searches file contents |
+| Autocomplete | Start typing — suggestions appear automatically |
+| Go to definition | `Ctrl+g` on a function or variable |
+| Hover docs | `K` over a symbol shows documentation |
+| Diagnostics | Errors and warnings appear inline as virtual text |
+| Statusline | Bar at the bottom shows mode, branch, filename |
+| Indent guides | Vertical lines at each indent level |
+| Git signs | `│` in the gutter next to changed lines |
 
 ---
 

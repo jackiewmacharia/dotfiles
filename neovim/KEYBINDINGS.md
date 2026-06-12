@@ -1,6 +1,7 @@
 # Neovim Keybindings
 
 > Works in normal and insert mode unless marked (n) for normal mode only.
+> Leader key is `Space`.
 
 ## File Tree (nvim-tree)
 | Key | VS Code equiv | Action |
@@ -69,33 +70,38 @@
 | `i` | Insert mode |
 | `v` | Visual mode (select, then y/d/p) |
 
-## Language Server (CoC)
+## Language Server
+> These keys are active only when an LSP server is attached to the file.
+
 | Key | VS Code equiv | Action |
 |-----|--------------|--------|
+| `K` (n) | hover | Show docs / type signature |
 | `Ctrl+.` | `Cmd+.` | Code actions |
 | `Ctrl+g` | `F12` | Go to definition |
-| `Ctrl+m` | `F2` | Rename symbol |
 | `gr` (n) | `Shift+F12` | Find references |
+| `F2` | `F2` | Rename symbol |
 | `gy` (n) | — | Go to type definition |
 | `gi` (n) | — | Go to implementation |
-| `K` (n) | hover | Show docs |
-| `Tab` | `Tab` | Next autocomplete |
-| `Shift+Tab` | `Shift+Tab` | Prev autocomplete |
-| `Enter` | `Enter` | Confirm autocomplete |
 
-## Spell Check
-| Key | Action |
-|-----|--------|
-| `Ctrl+,` (n) | Previous spelling error |
-
-## Git
+## Completion
 | Key | VS Code equiv | Action |
 |-----|--------------|--------|
-| `Ctrl+j` | — | Next git change in file |
-| `Ctrl+k` | — | Previous git change in file |
+| `Tab` | `Tab` | Next suggestion / expand snippet |
+| `Shift+Tab` | `Shift+Tab` | Previous suggestion |
+| `Enter` | `Enter` | Confirm suggestion |
+| `Ctrl+Space` | `Ctrl+Space` | Trigger completion manually |
+| `Ctrl+e` | `Escape` | Dismiss completion |
+
+## Git (gitsigns + fugitive)
+| Key | VS Code equiv | Action |
+|-----|--------------|--------|
+| `Ctrl+j` (n) | — | Next changed hunk in file |
+| `Ctrl+k` (n) | — | Previous changed hunk in file |
+| `Space` `hs` (n) | — | Stage hunk under cursor |
+| `Space` `hr` (n) | — | Reset hunk under cursor |
+| `Space` `gb` (n) | GitLens blame | Toggle inline blame on current line |
 | `:Git` | Source Control panel | Git status |
 | `:Git diff` | — | Diff view |
-| `:Git blame` | GitLens blame | Line blame |
 | `:Gdiffsplit` | Diff editor | Side-by-side diff |
 
 ## Tabs (bufferline)
@@ -103,7 +109,14 @@
 |-----|--------------|--------|
 | `Tab` | `Ctrl+Tab` | Next tab |
 | `Shift+Tab` | `Ctrl+Shift+Tab` | Previous tab |
-| `Ctrl+w` | `Cmd+w` | Close current tab |
+| `Space` `bd` | `Cmd+w` | Close current tab |
+
+## Spell Check
+| Key | Action |
+|-----|--------|
+| `Ctrl+,` (n) | Jump to previous spelling error |
+
+> Spell check is active only in markdown, text, and git commit files.
 
 ---
 
