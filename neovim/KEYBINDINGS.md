@@ -62,6 +62,7 @@
 | `yy` (n) | — | Copy line |
 | `p` (n) | `Cmd+v` | Paste |
 | `d` (n) | `Cmd+x` | Cut selection |
+| `Shift+Tab` (i) | `Shift+Tab` | Dedent current line |
 
 ## Modes
 | Key | Action |

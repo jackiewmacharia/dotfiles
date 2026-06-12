@@ -80,7 +80,7 @@ Open a file and check:
 | Autocomplete | Start typing — suggestions appear automatically |
 | Go to definition | `Ctrl+g` on a function or variable |
 | Hover docs | `K` over a symbol shows documentation |
-| Diagnostics | Errors and warnings appear inline as virtual text |
+| Diagnostics | Errors and warnings appear inline as virtual text in normal and insert mode |
 | Statusline | Bar at the bottom shows mode, branch, filename |
 | Indent guides | Vertical lines at each indent level |
 | Git signs | `│` in the gutter next to changed lines |
