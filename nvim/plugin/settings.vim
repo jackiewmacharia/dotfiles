@@ -21,6 +21,7 @@ set noequalalways           " prevent windows from auto-resizing
 set backupdir=~/.cache/vim  " backup file location
 set updatetime=1000         " used for autosave and gitgutter
 set backspace=indent,eol,start  " backspace across lines
+set whichwrap+=<,>,[,]          " arrow keys wrap across lines
 
 inoremap <S-Tab> <C-d>
 
