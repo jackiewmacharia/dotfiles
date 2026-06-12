@@ -1,4 +1,7 @@
 " Key mappings
+" LSP keys (K, Ctrl+., Ctrl+g, gr, F2, gy, gi) are set per-buffer in lsp.lua
+
+let mapleader = " "
 
 " ── nvim-tree ─────────────────────────────────────────────
 nnoremap <C-b> :NvimTreeToggle<CR>
@@ -11,25 +14,6 @@ inoremap <C-p> <Esc>:Telescope find_files<CR>
 nnoremap <C-f> :Telescope live_grep<CR>
 inoremap <C-f> <Esc>:Telescope live_grep<CR>
 
-" ── Code actions ──────────────────────────────────────────
-nmap <C-.> <Plug>(coc-codeaction-cursor)
-imap <C-.> <Esc><Plug>(coc-codeaction-cursor)
-
-" ── Go to definition ──────────────────────────────────────
-nmap <C-g> <Plug>(coc-definition)
-imap <C-g> <Esc><Plug>(coc-definition)
-
-" ── Find references ───────────────────────────────────────
-nmap gr <Plug>(coc-references)
-
-" ── Rename symbol ─────────────────────────────────────────
-nmap <C-m> <Plug>(coc-rename)
-imap <C-m> <Esc><Plug>(coc-rename)
-
-" ── Toggle comment ────────────────────────────────────────
-nmap gcc <Plug>NERDCommenterToggle
-vmap gc <Plug>NERDCommenterToggle
-
 " ── Undo/Redo ─────────────────────────────────────────────
 nnoremap <C-z> u
 inoremap <C-z> <Esc>ui
@@ -40,11 +24,7 @@ nnoremap <C-q> :qa<CR>
 " ── Buffer tabs ───────────────────────────────────────────
 nnoremap <Tab> :BufferLineCycleNext<CR>
 nnoremap <S-Tab> :BufferLineCyclePrev<CR>
-nnoremap <C-w> :bdelete<CR>
-
-" ── Git hunk navigation ───────────────────────────────────
-nnoremap <C-j> :GitGutterNextHunk<CR>
-nnoremap <C-k> :GitGutterPrevHunk<CR>
+nnoremap <leader>bd :bdelete<CR>
 
 " ── Spell navigation ──────────────────────────────────────
 nnoremap <C-,> [s

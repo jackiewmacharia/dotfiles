@@ -4,7 +4,7 @@ require("bufferline").setup({
     close_command = "bdelete! %d",
     right_mouse_command = "bdelete! %d",
     left_mouse_command = "buffer %d",
-    diagnostics = "coc",
+    diagnostics = "nvim_lsp",
     offsets = {
       {
         filetype = "NvimTree",
@@ -18,3 +18,4 @@ require("bufferline").setup({
     separator_style = "slant",
   },
 })
+

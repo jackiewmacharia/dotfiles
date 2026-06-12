@@ -15,14 +15,16 @@ set wildmode=longest,list   " bash-like tab completions
 set cc=80                   " 80 column guide
 set clipboard=unnamedplus   " use system clipboard
 set cursorline              " highlight current line
-set spell                   " spell check
 set noswapfile              " no swap files
 set noequalalways           " prevent windows from auto-resizing
 set backupdir=~/.cache/vim  " backup file location
-set updatetime=1000         " used for autosave and gitgutter
+set updatetime=300          " used for autosave and gitsigns
 
 filetype plugin indent on
 syntax on
 
-" Autosave after 1s of inactivity
+" Autosave after updatetime of inactivity
 autocmd CursorHold,CursorHoldI * silent! write
+
+" Spell check only in prose filetypes
+autocmd FileType markdown,text,gitcommit setlocal spell
