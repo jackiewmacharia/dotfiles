@@ -1,6 +1,7 @@
 # navigation
 alias home='~'
 alias desktop='~/Desktop'
+alias dotfiles='~/src/dotfiles'
 alias cdnvim='~/.config/nvim'
 alias cdzsh='~/.zsh'
 alias nzsh='nvim ~/.zshrc'
