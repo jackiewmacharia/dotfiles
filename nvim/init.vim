@@ -47,4 +47,7 @@ call plug#begin()
 
   " Syntax
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  " Markdown
+  Plug 'MeanderingProgrammer/render-markdown.nvim'
 call plug#end()
