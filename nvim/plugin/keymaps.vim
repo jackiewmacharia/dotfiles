@@ -28,4 +28,3 @@ nnoremap <leader>bd :bdelete<CR>
 
 " ── Spell navigation ──────────────────────────────────────
 nnoremap <C-,> [s
-
