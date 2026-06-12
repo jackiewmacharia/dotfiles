@@ -1,10 +1,10 @@
 # navigation
 alias home='~'
 alias desktop='~/Desktop'
-alias cnvim='~/.config/nvim'
-alias czsh='~/.zsh'
-alias nvzsh='nvim ~/.zshrc'
-alias cdzsh='code ~/.zshrc'
+alias cdnvim='~/.config/nvim'
+alias cdzsh='~/.zsh'
+alias nzsh='nvim ~/.zshrc'
+alias czsh='code ~/.zshrc'
 alias mkdir='mkdir -p'
 mkdircd() { mkdir -p "$1" && "$1"; }
 
