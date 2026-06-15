@@ -1,3 +1,7 @@
+local clock = function()
+  return os.date('%H:%M')
+end
+
 require('lualine').setup({
   options = {
     theme = 'auto',
@@ -9,9 +13,8 @@ require('lualine').setup({
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
     lualine_c = { { 'filename', path = 1 } },
-    lualine_x = { 'filetype' },
+    lualine_x = { 'searchcount', 'selectioncount', 'filetype' },
     lualine_y = { 'progress' },
-    lualine_z = { 'location' },
+    lualine_z = { 'location', clock },
   },
 })
-
