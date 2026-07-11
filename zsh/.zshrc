@@ -25,12 +25,13 @@ export LDFLAGS="-L/opt/homebrew/opt/postgresql@18/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@18/include"
 
 # Lazy-load NVM to avoid slow shell startup; Apple Silicon path
-export NVM_DIR=~/.nvm
-nvm() {
+export NVM_DIR="$HOME/.nvm"
+export PATH="$NVM_DIR/versions/node/$(cat $NVM_DIR/alias/default)/bin:$PATH"
+_load_nvm() {
   unset -f nvm node npm npx
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-  nvm "$@"
 }
-node() { nvm; node "$@"; }
-npm()  { nvm; npm "$@"; }
-npx()  { nvm; npx "$@"; }
+nvm()  { _load_nvm; nvm "$@"; }
+node() { _load_nvm; node "$@"; }
+npm()  { _load_nvm; npm "$@"; }
+npx()  { _load_nvm; npx "$@"; }
