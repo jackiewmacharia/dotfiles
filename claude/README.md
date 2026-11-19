@@ -25,14 +25,14 @@ Each part is hidden when Claude Code doesn't send its data. The bottom line show
 
 ## Setup
 
-1. Link the script into `~/.claude`:
+1. Copy the script into `~/.claude`:
 
    ```sh
    mkdir -p ~/.claude
-   ln -sf ~/Desktop/dotfiles/claude/statusline-command.sh ~/.claude/statusline-command.sh
+   cp ~/Desktop/dotfiles/claude/statusline-command.sh ~/.claude/statusline-command.sh
    ```
 
-   Change `~/Desktop/dotfiles` if the repo lives somewhere else.
+   Change `~/Desktop/dotfiles` if the repo lives somewhere else. The copy keeps working after the repo is deleted. To pick up later changes, pull the repo and run the same `cp` again; it replaces the old file.
 
 2. Add the `statusLine` block to `~/.claude/settings.json`. Create the file if it doesn't exist, and keep any settings already in it:
 
